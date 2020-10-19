@@ -1,9 +1,10 @@
 import torch
 import argparse
 import collections
+from configuration.config import *
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument("--input_model_path", type=str, default="google_model.bin",
+parser.add_argument("--input_model_path", type=str, default=str(bert_data_path/'UER'/'mixed_corpus_bert_base_model.bin'),
                         help=".")
 parser.add_argument("--output_model_path", type=str, default="huggingface_model.bin",
                         help=".")
